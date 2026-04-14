@@ -12,7 +12,21 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @php
+            $showVite = false;
+            if (file_exists(public_path('hot'))) {
+                $showVite = true;
+            } elseif (file_exists(public_path('build/manifest.json'))) {
+                $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+                if (isset($manifest['resources/js/app.js'])) {
+                    $showVite = true;
+                }
+            }
+        @endphp
+
+        @if ($showVite)
+            @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @endif
         
         <!-- Alpine.js CDN Fallback (in case npm run dev is not running) -->
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
