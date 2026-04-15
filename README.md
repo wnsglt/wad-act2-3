@@ -14,6 +14,6 @@ The project utilizes the following Laravel Eloquent relationships:
 ### 3. Many-to-Many
 - **Order to Product**: An **Order** can contain multiple **Products**, and a single **Product** can be part of many different orders. This is managed via a pivot table (`order_product`) which also tracks the quantity of each product in a specific order.
 
-# Eloquent Relationships Diagram (ERD)
+## Eloquent Relationships Diagram (ERD)
 <img width="671" height="571" alt="ERD" src="https://github.com/user-attachments/assets/6ba1e1dd-342f-4fbd-bbb2-ec2baabe095e" />
 
