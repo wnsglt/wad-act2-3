@@ -1,6 +1,6 @@
 # Customer & Order Management System
 
-A simplified Laravel-based application for managing customers, products, and orders. This project demonstrates the implementation of core Eloquent relationships and role-based access control.
+A simplified Laravel-based application for managing customers, products, and orders. This project demonstrates the implementation of core Eloquent relationships and admin access control.
 
 ## Project Description
 This system allows Administrators to manage a catalog of products and view all customer profiles and orders. Standard Users can register, create a personal profile, and view their own order history. The application uses Laravel Breeze for authentication and features a clean, responsive UI with Tailwind CSS.
