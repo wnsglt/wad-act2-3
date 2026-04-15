@@ -16,7 +16,7 @@
                         <x-input-label for="name" :value="__('Full Name')" />
                         <x-text-input id="name" name="name" type="text"
                             class="mt-1 block w-full"
-                            value="{{ old('name') }}" required />
+                            value="{{ old('name') }}" placeholder="Juan Dela Cruz" required />
                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
                     </div>
 
@@ -24,7 +24,7 @@
                         <x-input-label for="email" :value="__('Email')" />
                         <x-text-input id="email" name="email" type="email"
                             class="mt-1 block w-full"
-                            value="{{ old('email') }}" required />
+                            value="{{ old('email') }}" placeholder="juan.delacruz@example.com" required />
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
 
@@ -32,7 +32,7 @@
                         <x-input-label for="address" :value="__('Address')" />
                         <x-text-input id="address" name="address" type="text"
                             class="mt-1 block w-full"
-                            value="{{ old('address') }}" required />
+                            value="{{ old('address') }}" placeholder="123 Street, City" required />
                         <x-input-error :messages="$errors->get('address')" class="mt-2" />
                     </div>
 
@@ -40,7 +40,7 @@
                         <x-input-label for="phone" :value="__('Phone Number')" />
                         <x-text-input id="phone" name="phone" type="text"
                             class="mt-1 block w-full"
-                            value="{{ old('phone') }}" required />
+                            value="{{ old('phone') }}" placeholder="0912 345 6789" required />
                         <x-input-error :messages="$errors->get('phone')" class="mt-2" />
                     </div>
 
